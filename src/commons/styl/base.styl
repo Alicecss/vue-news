@@ -1,0 +1,44 @@
+
+
+
+@media (min-device-aspect-ratio: 1.5 ),(-webkit-device-pixel-ratio: 1.5)
+  .border-1px
+    &::after
+      -webkit-transform: scaleX(0.7)
+      -moz-transform: scaleX(0.7)
+      -ms-transform: scaleX(0.7)
+      -o-transform: scaleX(0.7)
+      transform: scaleX(0.7)
+@media (min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 2)
+  .border-1px
+    &::after
+      -webkit-transform: scaleY(0.5)
+      -moz-transform: scaleY(0.5)
+      -ms-transform: scaleY(0.5)
+      -o-transform: scaleY(0.5)
+      transform: scaleY(0.5)
+
+@media (min-device-pixel-ratio: 3),(-webkit-min-device-pixel-ratio: 3)
+  .border-1px
+    &::after
+      -webkit-transform: scaleY(0.34)
+      -moz-transform: scaleY(0.34)
+      -ms-transform: scaleY(0.34)
+      -o-transform: scaleY(0.34)
+      transform: scaleY(0.34)
+
+*
+  padding 0
+  margin 0
+  list-style none
+
+border-1px($num)
+  position relative
+  &::after
+    display block
+    width 100%
+    content ""
+    position absolute
+    left 0
+    top 0
+    border-top 1px solid $num
